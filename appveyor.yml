@@ -1,0 +1,10 @@
+version: 0.1.0-BUILD{build}
+image: Visual Studio 2017
+before_build:
+  - nuget restore
+  - cmd: node -v
+  - cmd: C:\cygwin\bin\bash.exe pokus.sh
+build:
+  verbosity: normal
+  project: aerogear-xamarin-sdk.sln
+test: on
